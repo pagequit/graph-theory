@@ -1,0 +1,15 @@
+{
+  "name": "graph-theory",
+  "dependencies": {},
+  "devDependencies": {
+    "bun-types": "^1.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun --hot dev.ts",
+    "wasm:build": "wasm-pack build --target web",
+    "cargo:watch": "cargo watch -w src -- wasm-pack build --target web"
+  }
+}
