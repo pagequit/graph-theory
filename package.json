@@ -8,8 +8,10 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun --hot dev.ts",
-    "wasm:build": "wasm-pack build --target web",
-    "cargo:watch": "cargo watch -w src -- wasm-pack build --target web"
+    "serve": "bun --hot ./serve.ts",
+    "build": "bun build ./src/app.ts  --outdir ./public/build --target browser",
+    "watch": "bun build ./src/app.ts  --outdir ./public/build --target browser --watch",
+    "wasm:build": "wasm-pack build --target web --out-dir ./public/build",
+    "wasm:watch": "cargo watch -w src -- wasm-pack build --target web --out-dir ./public/build --dev"
   }
 }
